@@ -1,34 +1,34 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
+
 function App() {
-  const [count, setCount] = useState(0)
+  
+  const alexanderTheGreatQuotes = [
+      "I am not afraid of an army of lions led by a sheep; I am afraid of an army of sheep led by a lion.",
+      "There is nothing impossible to him who will try.",
+      "A tomb now suffices him for whom the world was not enough.",
+      "I would rather live a short life of glory than a long one of obscurity.",
+      "In the end, when it's over, all that matters is what you've done.",
+      "He who is not a good servant will not be a good master.",
+      "I am indebted to my father for living, but to my teachers for living well.",
+      "The greatest victory is that which requires no battle.",
+      "To conquer the world is not enough; it is necessary to be able to conquer oneself.",
+      "It is not the strongest of the species that survive, nor the most intelligent, but the one most responsive to change.",
+      "I would rather die of passion than of boredom.",
+      "The weak fall, but the strong will remain and never go under!",
+      "There is nothing more important than the freedom of the mind.",
+      "A great man is one who can have power and not abuse it.",
+      "What we do in life echoes in eternity.",
+      "I am not a man, I am a legend."
+  ];
+
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div>
+      <div className="Quotes">
+        <h4 className="">{alexanderTheGreatQuotes[Math.floor(Math.random() * alexanderTheGreatQuotes.length)]}</h4>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    </div>
   )
 }
 
