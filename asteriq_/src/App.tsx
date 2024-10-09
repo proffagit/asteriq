@@ -1,5 +1,6 @@
 import './App.css'
-
+import { IonIcon } from '@ionic/react'
+import { documentOutline } from 'ionicons/icons'
 
 function App() {
   
@@ -22,12 +23,12 @@ function App() {
       "I am not a man, I am a legend."
   ];
 
-
   return (
     <div>
       <div className="Quotes">
-        <h4 className="">{alexanderTheGreatQuotes[Math.floor(Math.random() * alexanderTheGreatQuotes.length)]}</h4>
+        <h4>{alexanderTheGreatQuotes[Math.floor(Math.random() * alexanderTheGreatQuotes.length)]}</h4>
       </div>
+      <IonIcon icon={documentOutline} />
     </div>
   )
 }
