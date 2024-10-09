@@ -1,18 +1,134 @@
-/* QUOTE STYLING */
-.Quotes {
-    font-family: 'Courier New', 'Georgia', 'Times New Roman', serif;
-    font-style: italic;
-    color: var(--light-bg-color); /* Dark gray color for better readability */
-
-    
-    padding-left: 10px;
-    padding-right: 10px;
+/* ROOT VARIABLES */
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2c3e50;
+    --text-color: #333;
+    --background-color: #f5f5f5;
+    --icon-color: #7f8c8d;
+    --menu-background: #1e3a5f;
+    --menu-text-color: #ffffff;
+    --menu-hover-color: #2a4a7f;
+    --border-color: #333333;
 }
 
+/* GLOBAL STYLES */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
 
+/* LAYOUT */
+.main-container {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
 
+.menu-container {
+    width: 18rem;
+    max-height: calc(100vh - 2rem);
+    /* UPDATED: Gray theme */
+    background-color: #f0f0f0; /* Light gray for background */
+    color: #333333; /* Dark gray for text */
+    padding: 1.25rem;
+    /* UPDATED: Softer shadow for depth */
+    box-shadow: 0.125rem 0 0.3125rem rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    /* UPDATED: Subtle border color */
+    border: 0.0625rem solid #d0d0d0;
+    border-radius: 1rem;
+    margin: 1rem;
+}
 
+.content-container {
+    flex-grow: 1;
+    padding: 1.25rem;
+    overflow-y: auto;
+}
 
+/* SEARCH BAR */
+.search-container {
+    display: flex;
+    align-items: center;
+    /* UPDATED: Lighter gray for search bar */
+    background-color: #e0e0e0;
+    border-radius: 1.25rem;
+    padding: 0.3125rem 0.625rem;
+    margin-bottom: 1.25rem;
+}
 
+.search-input {
+    flex-grow: 1;
+    border: none;
+    background: transparent;
+    padding: 0.3125rem;
+    font-size: 0.875rem;
+    /* UPDATED: Darker text color for better contrast */
+    color: #333333;
+}
 
+.search-input::placeholder {
+    /* UPDATED: Placeholder color */
+    color: rgba(51, 51, 51, 0.5);
+}
 
+.search-icon,
+.search-arrow-icon {
+    color: #333333;
+    /* UPDATED: Reduced font size for smaller icons */
+    font-size: 0.875rem;
+    margin: 0 0.3125rem;
+}
+
+/* RECENTLY OPENED SECTION */
+.centered-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.icon-name-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0.5rem;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.icon-name-container:hover {
+    opacity: 1;
+}
+
+.large-icon {
+    font-size: 1.75rem;
+    /* UPDATED: Changed icon color to grayish */
+    color: #5a6a7a;
+}
+
+.name {
+    margin-top: 0.25rem;
+    font-size: 0.75rem;
+    text-align: center;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 48rem) {
+    .main-container {
+        flex-direction: column;
+    }
+
+    .menu-container {
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 0.0625rem solid var(--border-color);
+    }
+
+    .content-container {
+        margin-left: 0;
+    }
+}

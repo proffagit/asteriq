@@ -45,12 +45,11 @@ body {
   min-width: 320px;
   min-height: 100vh;
 
-  background-color: var(--dark-bg-color);
-  color: var(--light-bg-color);
+  background-color: var(--light-bg-color);
+  color: var(--dark-bg-color);
 
-  display: flex;
-  justify-content: center; /* Center children horizontally */
-  /* align-items: center; */ /* Center children vertically */
+/*   display: flex;
+  justify-content: center;  */
 }
 
 h1 {
